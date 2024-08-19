@@ -1,0 +1,51 @@
+[handleMsg]:  {
+  key: {
+    remoteJid: '593990898730@s.whatsapp.net',
+    fromMe: false,
+    id: '3A561A639FF88A41887C',
+    participant: undefined
+  },
+  messageTimestamp: 1724087092,
+  pushName: 'Christian Rivera',
+  broadcast: false,
+  message: Message {
+    audioMessage: AudioMessage {
+      url: 'https://mmg.whatsapp.net/v/t62.7117-24/29376178_807271824891178_3890902976429684623_n.enc?ccb=11-4&oh=01_Q5AaIKKlcIoW9o20GiKWdNa1XLVK6TM1yyjpK2jUSS0kZpXP&oe=66EAF468&_nc_sid=5e03e0&mms3=true',
+      mimetype: 'audio/ogg; codecs=opus',
+      fileSha256: [Uint8Array],
+      fileLength: [Long],
+      seconds: 3,
+      ptt: true,
+      mediaKey: [Uint8Array],
+      fileEncSha256: [Uint8Array],
+      directPath: '/v/t62.7117-24/29376178_807271824891178_3890902976429684623_n.enc?ccb=11-4&oh=01_Q5AaIKKlcIoW9o20GiKWdNa1XLVK6TM1yyjpK2jUSS0kZpXP&oe=66EAF468&_nc_sid=5e03e0',
+      mediaKeyTimestamp: [Long],
+      streamingSidecar: [Uint8Array],
+      waveform: [Uint8Array]
+    },
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2
+    }
+  },
+  body: '_event_voice_note__dc45f398-2d9e-4816-8e94-9a855199b9b0',
+  from: '593990898730'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_83222376-6a35-4020-8b1c-fd7bfb485368',
+  keyword: 'key_03e37283-f5fd-4b11-8f77-d51316df8eb3',
+  answer: '__call_action__',
+  options: {
+    media: null,
+    buttons: [],
+    capture: false,
+    child: null,
+    delay: 0,
+    idle: null,
+    ref: null,
+    nested: [],
+    keyword: {},
+    callback: true
+  },
+  refSerialize: '43e3631c344c453eeeb928fb5c25a1c8'
+}
