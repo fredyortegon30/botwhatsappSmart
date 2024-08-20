@@ -1,39 +1,31 @@
 [handleMsg]:  {
   key: {
-    remoteJid: '593990898730@s.whatsapp.net',
+    remoteJid: '573143210640@s.whatsapp.net',
     fromMe: false,
-    id: '3A561A639FF88A41887C',
+    id: '3EB091F650046C539C7684',
     participant: undefined
   },
-  messageTimestamp: 1724087092,
-  pushName: 'Christian Rivera',
+  messageTimestamp: 1724162362,
+  pushName: 'Fredy Ortegon',
   broadcast: false,
   message: Message {
-    audioMessage: AudioMessage {
-      url: 'https://mmg.whatsapp.net/v/t62.7117-24/29376178_807271824891178_3890902976429684623_n.enc?ccb=11-4&oh=01_Q5AaIKKlcIoW9o20GiKWdNa1XLVK6TM1yyjpK2jUSS0kZpXP&oe=66EAF468&_nc_sid=5e03e0&mms3=true',
-      mimetype: 'audio/ogg; codecs=opus',
-      fileSha256: [Uint8Array],
-      fileLength: [Long],
-      seconds: 3,
-      ptt: true,
-      mediaKey: [Uint8Array],
-      fileEncSha256: [Uint8Array],
-      directPath: '/v/t62.7117-24/29376178_807271824891178_3890902976429684623_n.enc?ccb=11-4&oh=01_Q5AaIKKlcIoW9o20GiKWdNa1XLVK6TM1yyjpK2jUSS0kZpXP&oe=66EAF468&_nc_sid=5e03e0',
-      mediaKeyTimestamp: [Long],
-      streamingSidecar: [Uint8Array],
-      waveform: [Uint8Array]
+    extendedTextMessage: ExtendedTextMessage {
+      text: 'hola',
+      contextInfo: [ContextInfo],
+      inviteLinkGroupTypeV2: 0
     },
     messageContextInfo: MessageContextInfo {
       deviceListMetadata: [DeviceListMetadata],
       deviceListMetadataVersion: 2
     }
   },
-  body: '_event_voice_note__dc45f398-2d9e-4816-8e94-9a855199b9b0',
-  from: '593990898730'
+  verifiedBizName: 'Fredy Ortegon',
+  body: 'hola',
+  from: '573143210640'
 }
 [QUEUE_SE_ENVIO]:  {
-  ref: 'ans_83222376-6a35-4020-8b1c-fd7bfb485368',
-  keyword: 'key_03e37283-f5fd-4b11-8f77-d51316df8eb3',
+  ref: 'ans_133db991-27c4-4d4b-96ce-04c09095be39',
+  keyword: 'key_7cc74483-293d-4978-8dfe-180ddf40f4d7',
   answer: '__call_action__',
   options: {
     media: null,
@@ -47,5 +39,48 @@
     keyword: {},
     callback: true
   },
-  refSerialize: '43e3631c344c453eeeb928fb5c25a1c8'
+  refSerialize: '88d77f200b46ec1fcb5cd06d52eeac0f'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '573143210640@s.whatsapp.net',
+    fromMe: false,
+    id: '3EB07918730C926A445EE2',
+    participant: undefined
+  },
+  messageTimestamp: 1724162371,
+  pushName: 'Fredy Ortegon',
+  broadcast: false,
+  message: Message {
+    extendedTextMessage: ExtendedTextMessage {
+      text: '!active',
+      contextInfo: [ContextInfo],
+      inviteLinkGroupTypeV2: 0
+    },
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2
+    }
+  },
+  verifiedBizName: 'Fredy Ortegon',
+  body: '!active',
+  from: '573143210640'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_31a4e7e8-d0bb-45b8-9b0c-4d6a0d574224',
+  keyword: 'key_dbdb9486-74c3-4280-890c-81b446d41412',
+  answer: '__call_action__',
+  options: {
+    media: null,
+    buttons: [],
+    capture: false,
+    child: null,
+    delay: 0,
+    idle: null,
+    ref: null,
+    nested: [],
+    keyword: {},
+    callback: true
+  },
+  refSerialize: '37d1882396c3781521e2fb78800bc54f'
 }

@@ -5,7 +5,11 @@ const QRPortalWeb = require('@bot-whatsapp/portal')
 const BaileysProvider = require('@bot-whatsapp/provider/baileys')
 const MockAdapter = require('@bot-whatsapp/database/mock')
 
-const { isActive } = require("./Utils")
+const isActive = async (ctx, ctxFn) => {
+    let currentGlobalState = await ctxFn.globalState.getMyState();
+    currentGlobalState.encendido = currentGlobalState.encendido ?? true; //Por default encendido
+    return currentGlobalState.encendido
+}
 
 const flowAdministrador = addKeyword(["!active", "!help"])
     .addAction(async (ctx, ctxFn) => {
