@@ -2,10 +2,10 @@
   key: {
     remoteJid: '573143210640@s.whatsapp.net',
     fromMe: false,
-    id: '3EB091F650046C539C7684',
+    id: '3EB0A2F898F8F4A00E99EE',
     participant: undefined
   },
-  messageTimestamp: 1724162362,
+  messageTimestamp: 1724166737,
   pushName: 'Fredy Ortegon',
   broadcast: false,
   message: Message {
@@ -24,8 +24,8 @@
   from: '573143210640'
 }
 [QUEUE_SE_ENVIO]:  {
-  ref: 'ans_133db991-27c4-4d4b-96ce-04c09095be39',
-  keyword: 'key_7cc74483-293d-4978-8dfe-180ddf40f4d7',
+  ref: 'ans_89e678bc-adf2-40e8-aa85-ae3da5d5e34a',
+  keyword: 'key_d42c5dd0-6fba-4a1a-88d9-96a3502a70a6',
   answer: '__call_action__',
   options: {
     media: null,
@@ -39,16 +39,16 @@
     keyword: {},
     callback: true
   },
-  refSerialize: '88d77f200b46ec1fcb5cd06d52eeac0f'
+  refSerialize: 'e721794d0fa88643468a8d50a769a7d7'
 }
 [handleMsg]:  {
   key: {
     remoteJid: '573143210640@s.whatsapp.net',
     fromMe: false,
-    id: '3EB07918730C926A445EE2',
+    id: '3EB05F3EC1A9800FB92F9C',
     participant: undefined
   },
-  messageTimestamp: 1724162371,
+  messageTimestamp: 1724166740,
   pushName: 'Fredy Ortegon',
   broadcast: false,
   message: Message {
@@ -67,8 +67,8 @@
   from: '573143210640'
 }
 [QUEUE_SE_ENVIO]:  {
-  ref: 'ans_31a4e7e8-d0bb-45b8-9b0c-4d6a0d574224',
-  keyword: 'key_dbdb9486-74c3-4280-890c-81b446d41412',
+  ref: 'ans_4b2cfbb7-7eda-464d-9922-323ae7a27b57',
+  keyword: 'key_19901043-f973-4ae7-a77b-c537c561e6d8',
   answer: '__call_action__',
   options: {
     media: null,
@@ -82,5 +82,177 @@
     keyword: {},
     callback: true
   },
-  refSerialize: '37d1882396c3781521e2fb78800bc54f'
+  refSerialize: '752c2c4c0b3858b9eae9577b4715da0f'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '573143210640@s.whatsapp.net',
+    fromMe: false,
+    id: '3EB0F4D465EEB055121218',
+    participant: undefined
+  },
+  messageTimestamp: 1724166743,
+  pushName: 'Fredy Ortegon',
+  broadcast: false,
+  message: Message {
+    extendedTextMessage: ExtendedTextMessage {
+      text: 'hola',
+      contextInfo: [ContextInfo],
+      inviteLinkGroupTypeV2: 0
+    },
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2
+    }
+  },
+  verifiedBizName: 'Fredy Ortegon',
+  body: 'hola',
+  from: '573143210640'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_89e678bc-adf2-40e8-aa85-ae3da5d5e34a',
+  keyword: 'key_d42c5dd0-6fba-4a1a-88d9-96a3502a70a6',
+  answer: '__call_action__',
+  options: {
+    media: null,
+    buttons: [],
+    capture: false,
+    child: null,
+    delay: 0,
+    idle: null,
+    ref: null,
+    nested: [],
+    keyword: {},
+    callback: true
+  },
+  refSerialize: 'e721794d0fa88643468a8d50a769a7d7'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '573143210640@s.whatsapp.net',
+    fromMe: false,
+    id: '3EB0A56C3497BF831E01D1',
+    participant: undefined
+  },
+  messageTimestamp: 1724166746,
+  pushName: 'Fredy Ortegon',
+  broadcast: false,
+  message: Message {
+    extendedTextMessage: ExtendedTextMessage {
+      text: 'fredy',
+      contextInfo: [ContextInfo],
+      inviteLinkGroupTypeV2: 0
+    },
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2
+    }
+  },
+  verifiedBizName: 'Fredy Ortegon',
+  body: 'fredy',
+  from: '573143210640'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_bcc67136-5328-4191-89fe-e5178c4f4a98',
+  keyword: 'ans_0197f25e-407b-4c39-ba82-b864e005a517',
+  answer: '¿Cuál es tu edad?',
+  options: {
+    media: null,
+    buttons: [],
+    capture: true,
+    child: null,
+    delay: 0,
+    idle: null,
+    ref: null,
+    nested: [],
+    keyword: {},
+    callback: true
+  },
+  refSerialize: 'c6f7eb390ab345ba33edaa1453ea5191'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '573143210640@s.whatsapp.net',
+    fromMe: false,
+    id: '3EB0D92FE6D24A4D80C515',
+    participant: undefined
+  },
+  messageTimestamp: 1724166749,
+  pushName: 'Fredy Ortegon',
+  broadcast: false,
+  message: Message {
+    extendedTextMessage: ExtendedTextMessage {
+      text: '33',
+      contextInfo: [ContextInfo],
+      inviteLinkGroupTypeV2: 0
+    },
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2
+    }
+  },
+  verifiedBizName: 'Fredy Ortegon',
+  body: '33',
+  from: '573143210640'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_835736e4-f467-4925-ada5-d0716327cc80',
+  keyword: 'ans_bcc67136-5328-4191-89fe-e5178c4f4a98',
+  answer: '¿De que pais sos?',
+  options: {
+    media: null,
+    buttons: [],
+    capture: true,
+    child: null,
+    delay: 0,
+    idle: null,
+    ref: null,
+    nested: [],
+    keyword: {},
+    callback: true
+  },
+  refSerialize: '04e81e339bdf055e17f59df576df5cbd'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '573143210640@s.whatsapp.net',
+    fromMe: false,
+    id: '3EB0FCF4664E53BA8782E2',
+    participant: undefined
+  },
+  messageTimestamp: 1724166752,
+  pushName: 'Fredy Ortegon',
+  broadcast: false,
+  message: Message {
+    extendedTextMessage: ExtendedTextMessage {
+      text: 'colombia',
+      contextInfo: [ContextInfo],
+      inviteLinkGroupTypeV2: 0
+    },
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2
+    }
+  },
+  verifiedBizName: 'Fredy Ortegon',
+  body: 'colombia',
+  from: '573143210640'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_b49d2f29-df6e-40bd-8837-ebd7d3eef35d',
+  keyword: 'ans_835736e4-f467-4925-ada5-d0716327cc80',
+  answer: '¡Gracias por la información!',
+  options: {
+    media: null,
+    buttons: [],
+    capture: false,
+    child: null,
+    delay: 0,
+    idle: null,
+    ref: null,
+    nested: [],
+    keyword: {},
+    callback: true
+  },
+  refSerialize: 'aa9f7959e6ad79d2b2047911467277f9'
 }

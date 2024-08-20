@@ -1,6 +1,6 @@
 const isActive = async (ctx, ctxFn) => {
     let currentGlobalState = await ctxFn.globalState.getMyState();
-    currentGlobalState.encendido = currentGlobalState.encendido ?? true; //Por default encendido
+    currentGlobalState.encendido = currentGlobalState.encendido ?? false; //Por default encendido
     return currentGlobalState.encendido
 }
 
