@@ -1,35 +1,43 @@
 const { createBot, createProvider, createFlow, addKeyword, EVENTS } = require('@bot-whatsapp/bot')
-require("dotenv").config
+const pdf = require("pdf-parse")
+const fs = require("fs")
+const chat = require("./chatgpt")
+const { voiceToText } = require("./voice2text")
+const { text2voice } = require("./text2voice")
+
+require("dotenv").config()
+
 
 const QRPortalWeb = require('@bot-whatsapp/portal')
 const BaileysProvider = require('@bot-whatsapp/provider/baileys')
 const MockAdapter = require('@bot-whatsapp/database/mock')
 
-const { isActive, isConvActive, toogleActive } = require("./utils")
-const flowAdmin = require("./flows/admin.flow")
 
-const flowToogle = addKeyword("ToogleActive")
+
+const flowVoice = addKeyword(EVENTS.VOICE_NOTE)
     .addAction(async (ctx, ctxFn) => {
-        const active = await toogleActive(ctx, ctxFn);
-        console.log(active)
+        const pdfPath = "./pdfs/pdf.pdf"
+        let pdfBuff = fs.readFileSync(pdfPath)
+        const pdfRead = await pdf(pdfBuff)
+        const pdfTxt = pdfRead.text
+
+        const prompt = "habla en español. eres un contacto inicial de una empresa  que se llama Smart Legacy, trata de enviar respuestas cortas, es una empresa de ecuador. El pitch es el siguiente: " + pdfTxt
+        const response = await voiceToText(ctx);
+        const text = response;
+        const responseGPT = await chat(prompt, text);
+
+        //await ctxFn.flowDynamic(responseGPT)
+
+        const answerAudio = await text2voice(responseGPT);
+        await ctxFn.provider.sendAudio(`${ctx.from}@s.whatsapp.net`, answerAudio);
     })
 
-const flowValidation = addKeyword(EVENTS.WELCOME)
-    .addAction(async (ctx, ctxFn) => {
-        if (!await isActive(ctx, ctxFn)) {
-            return ctxFn.endFlow()
-        } else {
-            if (!await isConvActive(ctx, ctxFn)) {
-                return ctxFn.endFlow()
-            } else {
-                return ctxFn.flowDynamic("Esta todo activo");
-            }
-        }
-    })
+
+
 
 const main = async () => {
     const adapterDB = new MockAdapter()
-    const adapterFlow = createFlow([flowAdmin, flowValidation, flowToogle])
+    const adapterFlow = createFlow([flowVoice])
     const adapterProvider = createProvider(BaileysProvider)
 
     createBot({

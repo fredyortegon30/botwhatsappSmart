@@ -19,7 +19,7 @@ module.exports = addKeyword(["!active", "!help"])
         // Comando para encender/apagar el bot
         if (ctx.body.includes("!active")) {
             if (await isActive(ctx, ctxFn)) {
-                await ctxFn.globalState.update({ encendido: false });
+                await ctxFn.globalState.update({ encendido: true });
                 return ctxFn.flowDynamic("Bot desactivado.");
             } else {
                 await ctxFn.globalState.update({ encendido: true });
