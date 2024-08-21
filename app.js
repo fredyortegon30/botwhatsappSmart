@@ -7,7 +7,7 @@ const QRPortalWeb = require('@bot-whatsapp/portal')
 const BaileysProvider = require('@bot-whatsapp/provider/baileys')
 
 
-const { isActive, isConvActive, toogleActive } = require("./utils")
+const { isActive, isConvActive, toogleActive } = require("./Utils")
 const flowAdmin = require("./flows/admin.flow")
 
 const flowToogle = addKeyword("ToogleActive")
