@@ -1,43 +1,40 @@
 const { createBot, createProvider, createFlow, addKeyword, EVENTS } = require('@bot-whatsapp/bot')
-const pdf = require("pdf-parse")
-const fs = require("fs")
-const chat = require("./chatgpt")
-const { voiceToText } = require("./voice2text")
-const { text2voice } = require("./text2voice")
 
-require("dotenv").config()
-
+const MongoAdapter = require('@bot-whatsapp/database/mongo');
+require("dotenv").config();
 
 const QRPortalWeb = require('@bot-whatsapp/portal')
 const BaileysProvider = require('@bot-whatsapp/provider/baileys')
-const MockAdapter = require('@bot-whatsapp/database/mock')
 
 
+const { isActive, isConvActive, toogleActive } = require("./utils")
+const flowAdmin = require("./flows/admin.flow")
 
-const flowVoice = addKeyword(EVENTS.VOICE_NOTE)
+const flowToogle = addKeyword("ToogleActive")
     .addAction(async (ctx, ctxFn) => {
-        const pdfPath = "./pdfs/pdf.pdf"
-        let pdfBuff = fs.readFileSync(pdfPath)
-        const pdfRead = await pdf(pdfBuff)
-        const pdfTxt = pdfRead.text
-
-        const prompt = "habla en español. eres un contacto inicial de una empresa  que se llama Smart Legacy, trata de enviar respuestas cortas, es una empresa de ecuador. El pitch es el siguiente: " + pdfTxt
-        const response = await voiceToText(ctx);
-        const text = response;
-        const responseGPT = await chat(prompt, text);
-
-        //await ctxFn.flowDynamic(responseGPT)
-
-        const answerAudio = await text2voice(responseGPT);
-        await ctxFn.provider.sendAudio(`${ctx.from}@s.whatsapp.net`, answerAudio);
+        const active = await toogleActive(ctx, ctxFn);
+        console.log(active)
     })
 
-
-
+const flowValidation = addKeyword(EVENTS.WELCOME)
+    .addAction(async (ctx, ctxFn) => {
+        if (!await isActive(ctx, ctxFn)) {
+            return ctxFn.endFlow()
+        } else {
+            if (!await isConvActive(ctx, ctxFn)) {
+                return ctxFn.endFlow()
+            } else {
+                return ctxFn.flowDynamic("Esta todo activo");
+            }
+        }
+    })
 
 const main = async () => {
-    const adapterDB = new MockAdapter()
-    const adapterFlow = createFlow([flowVoice])
+    const adapterDB = new MongoAdapter({
+        dbUri: process.env.MONGO_DB_URL,  // Corrige la manera de acceder a las variables de entorno
+        dbName: 'db_bot',
+    })
+    const adapterFlow = createFlow([flowAdmin, flowValidation, flowToogle])
     const adapterProvider = createProvider(BaileysProvider)
 
     createBot({
